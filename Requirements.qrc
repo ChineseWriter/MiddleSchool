@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/images" lang="Chinese">
+        <file>assets/images/Loading.gif</file>
+    </qresource>
+</RCC>
