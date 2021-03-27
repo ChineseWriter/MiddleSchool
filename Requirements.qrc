@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/images" lang="Chinese">
         <file>assets/images/Loading.gif</file>
+        <file>assets/images/logo1.png</file>
     </qresource>
 </RCC>
