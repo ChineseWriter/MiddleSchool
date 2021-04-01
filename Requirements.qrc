@@ -2,5 +2,10 @@
     <qresource prefix="/images" lang="Chinese">
         <file>assets/images/Loading.gif</file>
         <file>assets/images/logo1.png</file>
+        <file>assets/images/ILike.png</file>
+        <file>assets/images/LocalMusic.png</file>
+        <file>assets/images/Download.png</file>
+        <file>assets/images/KuGou.ico</file>
+        <file>assets/images/Search.png</file>
     </qresource>
 </RCC>

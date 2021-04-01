@@ -4,6 +4,7 @@
 # 加载
 from PyQt5.QtWidgets import QMainWindow
 from PyQt5.QtGui import QIcon
+from PyQt5.QtCore import Qt
 
 from widgets.MainWindow.mainwindow import Ui_MainWindow
 
@@ -28,10 +29,11 @@ class MainWindow(Ui_MainWindow, QMainWindow):
             self.__InitThread = InitThread(self)
         self.__Init()
 
+
     def __Init(self):
         self.setWindowTitle("加载中")
         self.setWindowIcon(QIcon(":/images/assets/images/logo1.png"))
-        self.statusbar.showMessage("加载中 . . .")
+        self.StatusBar.showMessage("加载中 . . .")
         self.Space.addWidget(self.__InitWindow)
         self.__InitWindow.show()
         self.__InitThread.FinishFlag.connect(self.__FinishInit)
@@ -39,7 +41,7 @@ class MainWindow(Ui_MainWindow, QMainWindow):
         return None
 
     def __FinishInit(self, Message):
-        self.statusbar.clearMessage()
+        self.StatusBar.clearMessage()
         self.setWindowTitle("青春纪念册")
         self.__InitWindow.close()
         self.__RemoveWindow()
@@ -54,4 +56,5 @@ class MainWindow(Ui_MainWindow, QMainWindow):
         self.__RemoveWindow()
         self.Space.addWidget(self.__MusicWindow)
         self.__MusicWindow.show()
+        self.__MusicWindow.Render()
         return None

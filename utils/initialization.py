@@ -3,7 +3,7 @@
 
 import time
 
-from PyQt5.QtCore import pyqtSignal
+from PyQt5.QtCore import pyqtSignal, Qt
 from PyQt5.QtWidgets import QMainWindow
 
 from utils.threading import Thread
@@ -18,19 +18,21 @@ class InitThread(Thread):
         self.MainWindow = MainWindow
 
     def run(self):
-        time.sleep(1)
         self.DoSomething()
+        time.sleep(1)
         self.FinishFlag.emit("Finish")
         return None
 
     def DoSomething(self):
         if Style.WindowColor == "Black":
-            with open("./assets/qss/black.css", "r", encoding="UTF-8") as File:
+            with open("./assets/qss/MainWindow/black.css", "r", encoding="UTF-8") as File:
                 Text = File.read()
-            self.MainWindow.setStyleSheet(Text)
-            self.MainWindow.setWindowOpacity(Style.WindowTransparency)
-        if Style.WindowColor == "White":
-            with open("./assets/qss/white.css", "r", encoding="UTF-8") as File:
+        elif Style.WindowColor == "White":
+            with open("./assets/qss/MainWindow/white.css", "r", encoding="UTF-8") as File:
                 Text = File.read()
-            self.MainWindow.setStyleSheet(Text)
-            self.MainWindow.setWindowOpacity(Style.WindowTransparency)
+        else:
+            Text = ""
+        self.MainWindow.setStyleSheet(Text)
+        self.MainWindow.setWindowOpacity(Style.WindowTransparency)
+        # self.MainWindow.setAttribute(Qt.WA_TranslucentBackground)
+        # self.MainWindow.setWindowFlag(Qt.FramelessWindowHint)

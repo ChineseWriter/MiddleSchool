@@ -1,0 +1,40 @@
+QPushButton {
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+QLabel {
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+QTextBrowser {
+    background-color: #5d7a88;
+}
+
+QListView {
+    border: none;
+    background-color: #263238;
+}
+
+QPushButton#LocalMusic:hover {
+    border-left: 4px solid red;
+}
+
+QPushButton#DownloadManage:hover {
+    border-left: 4px solid blue;
+}
+
+QLabel#LabelMyMusic {
+    border-bottom: 1px solid white;
+}
+
+QLabel#MyMusicSheet {
+    border-bottom: 1px solid white;
+}

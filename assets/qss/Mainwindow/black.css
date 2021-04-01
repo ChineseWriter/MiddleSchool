@@ -1,15 +1,13 @@
 QMainWindow{
     background-color: #263238;
 }
-QMenuBar{
-    background-color: #263238;
-}
+
 QMenu{
     background-color: #263238;
 }
-QStatusBar{
+QMenuBar{
     background-color: #263238;
 }
-QToolBar{
+QStatusBar{
     background-color: #263238;
 }
